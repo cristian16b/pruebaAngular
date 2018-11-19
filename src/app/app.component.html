@@ -1,29 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-  <p>Nombre del Empleado:{{nombre}}</p>
-  <p>Edad:{{edad}}</p>  
-  <!-- <p *ngIf="edad>18">Es mayor de edad.</p>
-  <p *ngIf="edad<18">Es menor de edad.</p> -->
-  
-  <!-- referecia if else  
-  https://stackoverflow.com/questions/43812770/angular-4-ngif-else-if
-  -->
-<ng-container *ngIf="edad >= 18;else second">
-  <p>mayor</p>
-</ng-container>
-<ng-template #second>
-  <p>menor</p>
-</ng-template>
- 
-
-  <table border="1">
-    <tr>
-      <td>Sueldos</td>
-    </tr>
-
-    <tr *ngFor="let sueldo of sueldos">
-      <td>{{sueldo}}</td>
-      <td><input id="i" value=" {{sueldo/1000}}"   /></td>
-    </tr>
-  </table>
+ <p>{{contador}}</p>
+  <button (click)="incrementar()">Sumar 1</button>
+  <button (click)="decrementar()">Restar 1</button>
 </div>
